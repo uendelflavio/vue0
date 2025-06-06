@@ -4,10 +4,10 @@ import {
   type ContextMenuItemEmits,
   type ContextMenuItemProps,
   useEmitAsProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
-const props = defineProps<ContextMenuItemProps & { class?: string; inset?: boolean }>()
+const props = defineProps<ContextMenuItemProps & { class?: string, inset?: boolean }>()
 const emits = defineEmits<ContextMenuItemEmits>()
 </script>
 

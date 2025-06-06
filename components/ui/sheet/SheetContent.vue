@@ -7,7 +7,7 @@ import {
   DialogOverlay,
   DialogPortal,
   useEmitAsProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cva } from 'class-variance-authority'
 import { Cross2Icon } from '@radix-icons/vue'
 import { cn } from '@/utils'

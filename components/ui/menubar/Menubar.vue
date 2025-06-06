@@ -3,7 +3,7 @@ import {
   MenubarRoot,
   type MenubarRootEmits,
   type MenubarRootProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = defineProps<MenubarRootProps & { class?: string }>()

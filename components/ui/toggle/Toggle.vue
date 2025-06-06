@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { ToggleEmits, ToggleProps } from 'radix-vue'
-import { Toggle, useForwardPropsEmits } from 'radix-vue'
+import type { ToggleEmits, ToggleProps } from 'reka-ui'
+import { Toggle, useForwardPropsEmits } from 'reka-ui'
 import type { VariantProps } from 'class-variance-authority'
 import { computed } from 'vue'
 import { toggleVariants } from '.'
@@ -21,7 +21,6 @@ const props = withDefaults(defineProps<Props>(), {
 const emits = defineEmits<ToggleEmits>()
 
 const toggleProps = computed(() => {
-  // eslint-disable-next-line unused-imports/no-unused-vars
   const { variant, size, ...otherProps } = props
   return otherProps
 })

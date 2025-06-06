@@ -4,7 +4,7 @@ import {
   type MenubarCheckboxItemEmits,
   type MenubarCheckboxItemProps,
   MenubarItemIndicator,
-} from 'radix-vue'
+} from 'reka-ui'
 import { CheckIcon } from '@radix-icons/vue'
 import { cn } from '@/utils'
 

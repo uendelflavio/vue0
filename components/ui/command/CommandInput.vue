@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { MagnifyingGlassIcon } from '@radix-icons/vue'
-import { ComboboxInput, type ComboboxInputProps } from 'radix-vue'
+import { ComboboxInput, type ComboboxInputProps } from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = defineProps<ComboboxInputProps>()

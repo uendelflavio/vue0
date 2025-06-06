@@ -173,11 +173,6 @@ useHead({
     return componentDescription.value
   },
 })
-defineOgImageComponent('Generated', {
-  title: componentDescription.value,
-  avatarUrl: dataUser.value?.avatarUrl,
-  imageUrl: `${useRuntimeConfig().public.siteUrl}/api/image/${slug.value}?slug=true`,
-})
 </script>
 
 <template>

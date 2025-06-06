@@ -2,11 +2,11 @@
 import {
   ContextMenuSubTrigger,
   type ContextMenuSubTriggerProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { ChevronRightIcon } from '@radix-icons/vue'
 import { cn } from '@/utils'
 
-const props = defineProps<ContextMenuSubTriggerProps & { class?: string; inset?: boolean }>()
+const props = defineProps<ContextMenuSubTriggerProps & { class?: string, inset?: boolean }>()
 </script>
 
 <template>

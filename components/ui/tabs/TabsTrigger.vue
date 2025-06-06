@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TabsTrigger, type TabsTriggerProps } from 'radix-vue'
+import { TabsTrigger, type TabsTriggerProps } from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = defineProps<TabsTriggerProps & { class?: string }>()

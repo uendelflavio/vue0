@@ -3,7 +3,7 @@ import {
   NavigationMenuRoot,
   type NavigationMenuRootEmits,
   type NavigationMenuRootProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import NavigationMenuViewport from './NavigationMenuViewport.vue'
 import { cn } from '@/utils'
 

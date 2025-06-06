@@ -2,7 +2,7 @@
 import {
   NavigationMenuTrigger,
   type NavigationMenuTriggerProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { ChevronDownIcon } from '@radix-icons/vue'
 import { navigationMenuTriggerStyle } from '.'
 import { cn } from '@/utils'

@@ -83,7 +83,7 @@ onMounted(async () => {
       :model-modifiers="modelModifiers"
       class="calendar"
       trim-weeks
-      :transition="'none'"
+      transition="none"
       :columns="columns"
     />
   </div>

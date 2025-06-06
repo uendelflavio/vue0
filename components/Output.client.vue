@@ -1,9 +1,8 @@
 <!-- eslint-disable vue/one-component-per-file -->
 <script setup lang="ts">
-import { computed, defineComponent, ref, watch } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { compileScript, parse } from '@vue/compiler-sfc'
 import * as Icon from 'lucide-vue-next'
-import { useToast } from '@/components/ui/toast'
 
 const props = defineProps<{
   sfcString: string

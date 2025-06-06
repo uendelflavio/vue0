@@ -20,39 +20,39 @@ export default async (event: H3Event<EventHandlerRequest>, component: DBComponen
     {
       role: `system`,
       content:
-        `Your task is to modify a Vue component for a web app, according to the user's request.\n`
-        + `If you judge it is relevant to do so, you can specify pre-made library components to use in the component update.\n`
+        `Your task is to modify a Vue v3 component for a web app, according to the user's request.\n`
+        + `If you judge it is relevant to do so, you can specify pre-made library single-file components to use in the single-file component update.\n`
         + `You can also specify the use of icons if you see that the user's update request requires it.`,
     },
     {
       role: `user`,
       content:
-        `Multiple library components can be used while creating a new component update in order to help you do a better design job, faster.\n\nAVAILABLE LIBRARY COMPONENTS:\n\`\`\`\n${
+        `Multiple library components can be used while creating a new single-file component update in order to help you do a better design job, faster.\n\nAVAILABLE LIBRARY COMPONENTS:\n\`\`\`\n${
           components
-          .map((e) => {
-            return `${e.name} : ${e.description};`
-          })
-          .join('\n')
-         }\n\`\`\``,
+            .map((e) => {
+              return `${e.name} : ${e.description};`
+            })
+            .join('\n')
+        }\n\`\`\``,
     },
     {
       role: `user`,
       content:
         `- Component description : \`${component.description}\`\n`
         + `- New component updates query : \n\`\`\`\n${prompt}\n\`\`\`\n\n`
-        + `Design the Vue component updates for the user, as the creative genius you are`,
+        + `Design the Vue v3 single-file component updates for the user, as the creative genius you are`,
     },
   ]
 
   const stream = useOpenAI(event).beta.chat.completions.stream({
-    model: 'gpt-4-1106-preview', // 'gpt-3.5-turbo-1106',
+    model: 'gpt-4.1-nano', // 'gpt-3.5-turbo-1106',
     messages: context,
     tools: [
       {
         type: 'function',
         function: {
           name: `design_new_component_api`,
-          description: `generate the required design details to create a new component`,
+          description: `generate the required design details to create a new single-file component`,
           parameters: zodToJsonSchema(functionSchema),
         },
       },

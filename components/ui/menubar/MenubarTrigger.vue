@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MenubarTrigger, type MenubarTriggerProps } from 'radix-vue'
+import { MenubarTrigger, type MenubarTriggerProps } from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = defineProps<MenubarTriggerProps & { class?: string }>()

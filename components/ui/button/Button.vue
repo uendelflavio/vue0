@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Primitive, type PrimitiveProps } from 'radix-vue'
-import { Loader2 } from 'lucide-vue-next'
+import { Primitive, type PrimitiveProps } from 'reka-ui'
 import { buttonVariants } from '.'
 
 interface Props extends PrimitiveProps {

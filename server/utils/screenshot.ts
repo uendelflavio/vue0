@@ -16,9 +16,9 @@ export async function screenshot(id: string) {
     IS_PRODUCTION
       ? connect({ browserWSEndpoint: `wss://chrome.browserless.io?token=${browserlessApiKey}&--window-size=1280,720` })
       : launch({
-        executablePath: chromeExecutables[process.platform as keyof typeof chromeExecutables],
-        headless: true,
-      })
+          executablePath: chromeExecutables[process.platform as keyof typeof chromeExecutables],
+          headless: true,
+        })
 
   const browser = await getBrowser()
 

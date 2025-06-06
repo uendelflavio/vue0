@@ -24,7 +24,7 @@ export default async (event: H3Event<EventHandlerRequest>) => {
 
   const components = (await import('@/template/shadcn-vue/metadata.json')).default
   const functionSchema = z.object({
-    new_component_description: z.string().describe(`Write a description for Vue component design task based on the user query. Stick strictly to what the user wants in their request - do not go off track`),
+    new_component_description: z.string().describe(`Write a description for Vue single-file component design task based on the user query. Stick strictly to what the user wants in their request - do not go off track`),
     use_library_components: z.array(z.object({
       library_component_name: z.enum(components.map(i => i.name) as [string]),
       library_component_usage_reason: z.string(),
@@ -35,7 +35,7 @@ export default async (event: H3Event<EventHandlerRequest>) => {
     {
       role: `system`,
       content:
-        `Your task is to design a new Vue component for a web app, according to the user's request.\n`
+        `Your task is to design a new Vue v3 single-file component for a web app, according to the user's request.\n`
         + `If you judge it is relevant to do so, you can specify pre-made library components to use in the task.\n`
         + `You can also specify the use of icons if you see that the user's request requires it.`,
     },
@@ -43,12 +43,12 @@ export default async (event: H3Event<EventHandlerRequest>) => {
       role: `user`,
       content:
         `Multiple library components can be used while creating a new component in order to help you do a better design job, faster.\n\nAVAILABLE LIBRARY COMPONENTS:\n\`\`\`\n${
-        components
-          .map((e) => {
-            return `${e.name} : ${e.description};`
-          })
-          .join('\n')
-         }\n\`\`\``,
+          components
+            .map((e) => {
+              return `${e.name} : ${e.description};`
+            })
+            .join('\n')
+        }\n\`\`\``,
     },
     {
       role: `user`,
@@ -59,7 +59,7 @@ export default async (event: H3Event<EventHandlerRequest>) => {
   ]
 
   const stream = useOpenAI(event).beta.chat.completions.stream({
-    model: 'gpt-4-1106-preview', // 'gpt-3.5-turbo-1106',
+    model: 'gpt-4.1-nano', // 'gpt-3.5-turbo-1106',
     messages: context,
     tools: [
       {

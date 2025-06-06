@@ -1,4 +1,4 @@
-import { and, desc, eq, max } from 'drizzle-orm'
+import { and, desc, eq } from 'drizzle-orm'
 
 export default defineEventHandler(async (event) => {
   const { id } = getRouterParams(event)

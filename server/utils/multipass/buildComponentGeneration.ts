@@ -33,8 +33,8 @@ export default async (event: H3Event<EventHandlerRequest>) => {
         examples.push(randomExample)
 
       console.log(
-          `tokens for context entry ${component.name} : ${totalTokens} `
-          + `(limit : ${TOKEN_LIMIT})`,
+        `tokens for context entry ${component.name} : ${totalTokens} `
+        + `(limit : ${TOKEN_LIMIT})`,
       )
     }
 
@@ -48,25 +48,25 @@ export default async (event: H3Event<EventHandlerRequest>) => {
     const examplesBlock = !component.examples.length
       ? ''
       : `\n\n`
-      + `# full code examples of Vue components that use ${component.name} :\n${
-     component.examples
-      .map((example) => {
-        return (
-          `\`\`\`${example.source}\n${example.code.trim()}\n\`\`\``
-        )
-      })
-      .join(`\n\n`)}`
+        + `# full code examples of Vue components that use ${component.name} :\n${
+          component.examples
+            .map((example) => {
+              return (
+                `\`\`\`${example.source}\n${example.code.trim()}\n\`\`\``
+              )
+            })
+            .join(`\n\n`)}`
 
     return {
       role: 'user',
-      content: `Library components can be used while making the new Vue component\n\n`
-      + `Suggested library component (${idx + 1}/${mappedComponent.length}) : ${component.name} - ${component.description}\n`
-      + `Suggested usage : ${component.usage}\n\n\n`
-      + `# examples of how ${component.name} can be used inside the new component:\n${examplesBlock}`
-      + `\n\nIcon elements can optionally be used when making the Vue component\n`
-      + `Example for using 'lucide-vue-next' (Only use icon from the library) \n`
-      + `\`\`\`1. ArrowRight\n2. Check\n3. Home\n4. User\n5. Search`
-      + `\`\`\``,
+      content: `Library components can be used while making the new Vue v3 component\n\n`
+        + `Suggested library single-file component (${idx + 1}/${mappedComponent.length}) : ${component.name} - ${component.description}\n`
+        + `Suggested usage : ${component.usage}\n\n\n`
+        + `# examples of how ${component.name} can be used inside the new single-file component:\n${examplesBlock}`
+        + `\n\nIcon elements can optionally be used when making the Vue v3 single-file component\n`
+        + `Example for using 'lucide-vue-next' (Only use icon from the library) \n`
+        + `\`\`\`1. ArrowRight\n2. Check\n3. Home\n4. User\n5. Search`
+        + `\`\`\``,
     } satisfies OpenAI.ChatCompletionMessageParam
   })
 

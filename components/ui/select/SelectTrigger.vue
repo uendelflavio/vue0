@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { SelectIcon, SelectTrigger, type SelectTriggerProps } from 'radix-vue'
+import { SelectIcon, SelectTrigger, type SelectTriggerProps } from 'reka-ui'
 import { ChevronDownIcon } from '@radix-icons/vue'
 import { cn } from '@/utils'
 
 const props = withDefaults(
-  defineProps<SelectTriggerProps & { class?: string; invalid?: boolean }>(),
+  defineProps<SelectTriggerProps & { class?: string, invalid?: boolean }>(),
   {
     class: '',
     invalid: false,

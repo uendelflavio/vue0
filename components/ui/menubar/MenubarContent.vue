@@ -4,7 +4,7 @@ import {
   type MenubarContentProps,
   MenubarPortal,
   useForwardProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = withDefaults(

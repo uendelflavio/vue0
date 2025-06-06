@@ -4,7 +4,7 @@ import {
   MenubarRadioItem,
   type MenubarRadioItemEmits,
   type MenubarRadioItemProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { DotFilledIcon } from '@radix-icons/vue'
 import { cn } from '@/utils'
 

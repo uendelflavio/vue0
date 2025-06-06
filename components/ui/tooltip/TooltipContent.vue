@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TooltipContent, type TooltipContentEmits, type TooltipContentProps, TooltipPortal, useForwardPropsEmits } from 'radix-vue'
+import { TooltipContent, type TooltipContentEmits, type TooltipContentProps, TooltipPortal, useForwardPropsEmits } from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = withDefaults(defineProps<TooltipContentProps>(), {

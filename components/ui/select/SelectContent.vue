@@ -6,11 +6,12 @@ import {
   SelectPortal,
   SelectViewport,
   useForwardPropsEmits,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = withDefaults(
-  defineProps<SelectContentProps & { class?: string }>(), {
+  defineProps<SelectContentProps & { class?: string }>(),
+  {
     position: 'popper',
     sideOffset: 4,
   },
@@ -37,7 +38,7 @@ const forwarded = useForwardPropsEmits(props, emits)
         :class="
           cn('p-0',
              position === 'popper'
-               && 'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]')"
+               && 'h-[var(--reka-select-trigger-height)] w-full min-w-[var(--reka-select-trigger-width)]')"
       >
         <slot />
       </SelectViewport>

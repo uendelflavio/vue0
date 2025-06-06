@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PaginationNext, type PaginationNextProps, useForwardProps } from 'radix-vue'
+import { PaginationNext, type PaginationNextProps, useForwardProps } from 'reka-ui'
 import { ChevronRightIcon } from '@radix-icons/vue'
 import {
   Button,

@@ -4,7 +4,7 @@ import {
   type NavigationMenuContentEmits,
   type NavigationMenuContentProps,
   useEmitAsProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = defineProps<NavigationMenuContentProps & { class?: string }>()

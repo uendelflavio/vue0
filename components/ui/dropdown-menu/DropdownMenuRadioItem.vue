@@ -5,7 +5,7 @@ import {
   type DropdownMenuRadioItemEmits,
   type DropdownMenuRadioItemProps,
   useEmitAsProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { DotFilledIcon } from '@radix-icons/vue'
 import { cn } from '@/utils'
 

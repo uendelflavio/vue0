@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MenubarSeparator, type MenubarSeparatorProps } from 'radix-vue'
+import { MenubarSeparator, type MenubarSeparatorProps } from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = defineProps<MenubarSeparatorProps>()

@@ -3,10 +3,10 @@ import {
   MenubarItem,
   type MenubarItemEmits,
   type MenubarItemProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
-const props = defineProps<MenubarItemProps & { inset?: boolean; class?: string }>()
+const props = defineProps<MenubarItemProps & { inset?: boolean, class?: string }>()
 
 const emits = defineEmits<MenubarItemEmits>()
 </script>

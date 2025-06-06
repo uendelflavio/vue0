@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ToastClose } from 'radix-vue'
+import { ToastClose } from 'reka-ui'
 import { Cross2Icon } from '@radix-icons/vue'
 import { cn } from '@/utils'
 

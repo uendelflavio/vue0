@@ -18,9 +18,9 @@ export default async (event: H3Event<EventHandlerRequest>, component: DBComponen
     {
       role: `system`,
       content:
-        `You are an expert at writing Vue components.\n`
-        + `Your task is to write a new update for the provided Vue component for a web app, according to the provided task details.\n`
-        + `The Vue component you write can make use of Tailwind classes for styling.\n`
+        `You are an expert at writing Vue v3 single-file components.\n`
+        + `Your task is to write a new update for the provided Vue v3 single-file component for a web app, according to the provided task details.\n`
+        + `The Vue component you write can make use of Tailwind v3 classes for styling.\n`
         + `If you judge it is relevant to do so, you can use library components and icons.\n\n`
         + `If the component is using imported component, dont overwrite the style for background color and text color.\n`
         + `You will write the full Vue component code, which should include all imports.`
@@ -39,12 +39,12 @@ export default async (event: H3Event<EventHandlerRequest>, component: DBComponen
         + `\`\`\`\n${componentDesignTask.description.user}\n\`\`\`\n\n\n`
         + `- additional component suggestions :\n`
         + `\`\`\`\n${componentDesignTask.description.llm}\n\`\`\`\n\n\n`
-        + `Write the full code for the new Vue component, which uses Tailwind classes if needed (add tailwind dark: classes too if you can; backgrounds in dark: classes should be black), and optionally, library components and icons, based on the provided design task.\n`
-        + `The full code of the new Vue component that you write will be written directly to a .vue file inside the Vue project.\n`
+        + `Write the full code for the new Vue v3 single-file component, which uses Tailwind v3 classes if needed (add tailwind dark: classes too if you can; backgrounds in dark: classes should be black), and optionally, library components and icons, based on the provided design task.\n`
+        + `The full code of the new Vue v3 single-file component that you write will be written directly to a .vue file inside the Vue project.\n`
         + `Answer with generated code only. DO NOT ADD ANY EXTRA TEXT DESCRIPTION OR COMMENTS BESIDES THE CODE. Your answer contains code only ! component code only !\n`
         + `Important :\n`
         + `- Make sure you import provided components libraries and icons that are provided to you if you use them !\n`
-        + `- Tailwind classes should be written directly in the elements class tags. DO NOT WRITE ANY CSS OUTSIDE OF CLASSES. DO NOT USE ANY <style> IN THE CODE ! CLASSES STYLING ONLY !\n`
+        + `- Tailwind v3 classes should be written directly in the elements class tags. DO NOT WRITE ANY CSS OUTSIDE OF CLASSES. DO NOT USE ANY <style> IN THE CODE ! CLASSES STYLING ONLY !\n`
         + `- Do not use libraries or imports except what is provided in this task; otherwise it would crash the component because not installed. Do not import extra libraries besides what is provided above !\n`
         + `- DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to be working as is without supplying any variable to them when importing them ! Only write a component that render directly with placeholders as data, component not supplied with any dynamic data.\n`
         + `- DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS OR defineProps ! `
@@ -58,7 +58,7 @@ export default async (event: H3Event<EventHandlerRequest>, component: DBComponen
   console.log(`> total context prompt tokens (estimate) : ${contextPromptToken}`)
 
   const stream = useOpenAI(event).beta.chat.completions.stream({
-    model: 'gpt-4-1106-preview',
+    model: 'gpt-4.1-nano',
     messages: context,
     stream: true,
   })

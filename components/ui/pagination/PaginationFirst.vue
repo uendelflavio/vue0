@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PaginationFirst, type PaginationFirstProps, useForwardProps } from 'radix-vue'
+import { PaginationFirst, type PaginationFirstProps, useForwardProps } from 'reka-ui'
 import { DoubleArrowLeftIcon } from '@radix-icons/vue'
 import {
   Button,

@@ -33,7 +33,7 @@ Yes of course! You are the owner of the OpenAI API Key, you can definitely use t
 
 1. [Nuxt3 - Framework](https://nuxt.com/)
 2. [Shadcn-vue - UI](https://shadcn-vue.com/)
-3. [Radix-vue - UI](https://radix-vue.com/)
+3. [reka-ui - UI](https://reka-ui.com/)
 4. [Drizzle - DB ORM](https://orm.drizzle.team/)
 5. [Turso - DB](https://turso.tech/)
 5. [Zod - Validation](https://zod.dev/)

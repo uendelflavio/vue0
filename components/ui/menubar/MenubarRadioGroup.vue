@@ -3,7 +3,7 @@ import {
   MenubarRadioGroup,
   type MenubarRadioGroupEmits,
   type MenubarRadioGroupProps,
-} from 'radix-vue'
+} from 'reka-ui'
 
 const props = defineProps<MenubarRadioGroupProps>()
 

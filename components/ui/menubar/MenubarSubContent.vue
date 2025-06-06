@@ -4,7 +4,7 @@ import {
   MenubarSubContent,
   type MenubarSubContentEmits,
   type MenubarSubContentProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = withDefaults(

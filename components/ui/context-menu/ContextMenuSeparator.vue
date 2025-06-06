@@ -2,7 +2,7 @@
 import {
   ContextMenuSeparator,
   type ContextMenuSeparatorProps,
-} from 'radix-vue'
+} from 'reka-ui'
 import { cn } from '@/utils'
 
 const props = defineProps<ContextMenuSeparatorProps>()
