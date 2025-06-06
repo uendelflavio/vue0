@@ -31,6 +31,13 @@ We would love to have your contributions! All PRs all welcomed! We need help bui
 3. Run `pnpm dev` to run Nuxt3
 4. Open `http://localhost:3000`
 
+### Common problems and solutions
+
+Error: Failed to launch the browser process! spawn /usr/bin/chromium-browser ENOENT TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+sudo apt-get update
+sudo apt-get install chromium-browser
+
 ## Credits
 
 All credits go to these open-source works and resources
